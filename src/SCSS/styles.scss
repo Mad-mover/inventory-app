@@ -1,0 +1,158 @@
+@import 'variables';
+@import 'mixens';
+@import 'classes';
+
+.app {
+    background-color: color(bg);
+    color: color(text);
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar {
+    @include flex(center, space-evenly, row);
+    border-bottom: 1px solid color(cblue);
+    border-radius: 0 0 10px 10px;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .logo {
+        color: color(cblue);
+        filter: brightness(1.3);
+        font-size: xx-large;
+        font-weight: bold;
+        margin-left: 1.5rem;
+    }
+
+    .space {
+        @include textGradient(cblue, cred);
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: xx-large;
+        font-weight: bolder;
+        color: inherit;
+        letter-spacing: 4px;
+    }
+
+    .hamburger {
+        cursor: pointer;
+        font-size: x-large;
+        font-weight: bold;
+        margin-right: 1rem;
+        z-index: 150;
+
+        .svg {
+            color: color(cblue) !important;
+        }
+    }
+
+    .sheet {
+        background-color: white;
+        opacity: 0.2;
+        top: 0px;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+    }
+
+    .menu {
+        background: color(bg);
+        box-shadow: 2px 0 10px 0px rgba(color(text), 0.5);
+        top: 0px;
+        right: 0px;
+        width: 300px;
+        height: 100vh;
+        position: fixed;
+        transform: translateX(110%);
+        transition: transform 500ms ease;
+        padding: 10px;
+        overflow: auto;
+        z-index: 120;
+
+        .menu-links {
+            @include flex(center, space-between, row);
+            border-bottom: 1px solid color(cblue);
+            color: color(cblue);
+            font-size: xx-large;
+            text-decoration: none;
+            padding: 10px 1rem;
+            border-radius: 1rem;
+            margin-bottom: 20px;
+
+            span {
+                color: color(text);
+                font-size: large;
+            }
+
+            &:hover {
+                background-color: rgba(color(cblue), 0.5);
+            }
+        }
+    }
+}
+
+.select {
+    @include flex(center, space-between, row);
+    width: 100%;
+    margin-bottom: 10px;
+
+    .react-select {
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+.items {
+    @include flex(center, space-evenly, column);
+    padding: 10px;
+    overflow: auto;
+    width: 100%;
+
+    .item {
+        @include flex(center, space-evenly, row);
+        background-color: color(cgray);
+        border-radius: 10px 10px 15px 15px;
+        height: fit-content;
+        width: 100%;
+
+        .img {
+            background-color: #ccc;
+            height: 50px;
+            margin-left: 10px;
+            width: 50px;
+        }
+
+        .content {
+            @include flex(center, space-between, column);
+            flex: 1;
+            height: 100%;
+            width: 100%;
+
+            .top {
+                @include flex(center, space-evenly, row);
+                flex: 0.5;
+                padding: 5px 10px;
+                width: 100%;
+
+                .item-name {
+                    color: orange;
+                    font-size: x-large;
+                }
+
+                .item-date {
+                    @include textGradient(cred, corange);
+                }
+            }
+
+            .bottom {
+                @include flex(center, space-evenly, row);
+                flex: 0.5;
+                padding: 5px 10px;
+                width: 100%;
+            }
+        }
+    }
+}

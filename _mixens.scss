@@ -1,0 +1,13 @@
+@mixin flex($align, $justify, $direction) {
+    display:  flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: wrap;
+}
+
+@mixin textGradient($firstC, $secondC) {
+    background: -webkit-linear-gradient(120deg, color($firstC), color($secondC));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,6 +1,11 @@
 $colors : (
-    bg : #0000,
+    bg : #000,
     text : #fff,
+    cblue : #052F5F,
+    cgreen : #1E441E,
+    cred : #650D1B,
+    cgray : rgb(32, 31, 31),
+    corange : orange,
 );
 
 @function color($value){

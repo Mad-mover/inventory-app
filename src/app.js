@@ -1,10 +1,13 @@
 import React from "react";
-import "./SCSS/app.scss";
+import { BrowserRouter } from "react-router-dom";
+import Store from "./components/store/Store";
 
 const App = () => {
     return (
-        <div>
-            <h1>hello this is jack</h1>
+        <div className='app'>
+            <BrowserRouter>
+                <Store />
+            </BrowserRouter>
         </div>
     );
 };
