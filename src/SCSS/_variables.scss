@@ -1,0 +1,14 @@
+$colors : (
+    bg : #0000,
+    text : #fff,
+);
+
+@function color($value){
+    @return map-get($colors, $value);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
